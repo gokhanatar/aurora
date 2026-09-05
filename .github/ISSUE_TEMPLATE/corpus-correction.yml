@@ -1,0 +1,52 @@
+name: 📜 Corpus correction
+description: A number, source or evidence level is wrong
+title: "[Corpus] "
+labels: ["corpus", "history"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Some evidence levels in the corpus are probably wrong. Correcting even one is a real
+        contribution — it changes what the scoring engine treats as historically grounded.
+
+  - type: input
+    id: entry
+    attributes:
+      label: Which entry?
+      placeholder: "N-VED-108, or source EGY-PT, or ratio R-256-243"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: problem
+    attributes:
+      label: What is wrong with it?
+      options:
+        - Evidence level is too strong
+        - Evidence level is too weak
+        - The citation is wrong or unverifiable
+        - The context description is inaccurate
+        - This number does not belong in the corpus at all
+        - A number is missing that should be here
+    validations:
+      required: true
+
+  - type: textarea
+    id: correction
+    attributes:
+      label: What should it be, and why?
+      description: |
+        Evidence levels: `direct` (explicit in a primary source) · `derived` (mathematically
+        derived, show the formula) · `interpretive` (later interpretation or counted) ·
+        `speculative` (modern claim, no primary support)
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Source
+      description: Primary source or scholarly edition, with a locator. A website is not a source.
+      placeholder: "Plato, Timaeus 35b–36b (Burnet, Oxford Classical Texts)"
+    validations:
+      required: true

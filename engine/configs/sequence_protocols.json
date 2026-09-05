@@ -1,0 +1,13 @@
+{
+  "study_id": "AURORA-SEQ-001",
+  "primary_outcome": "calm",
+  "base_sequence": [432, 528, 639],
+  "durations_min": [5, 8, 13],
+  "protocols": {
+    "A_forward": {"sequence": [432, 528, 639], "durations_min": [5, 8, 13]},
+    "B_reversed": {"sequence": [432, 528, 639], "durations_min": [13, 8, 5]},
+    "C_single": {"sequence": [432], "durations_min": [26]},
+    "D_random": {"sequence": "random", "durations_min": [5, 8, 13]},
+    "E_silence": {"sequence": [0, 0, 0], "durations_min": [5, 8, 13]}
+  }
+}

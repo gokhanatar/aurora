@@ -1,0 +1,23 @@
+{
+  "study_id": "AURORA-PILOT-001-S2",
+  "set": "validation",
+  "stage": 2,
+  "design_rationale": "Doğrulama aşaması. Aşama 1'de en yüksek etkiyi gösteren TEK koşul, sessizlik kontrolüne karşı sınanır. Tek karşılaştırma (k=1) olduğu için Bonferroni cezası yoktur ve d=0.8 için koşul başına 26 deneme %80 güç verir. Koşul kimliği Aşama 1 unblind edildikten SONRA doldurulur; analiz planı bu dosyada önceden dondurulmuştur.",
+  "primary_outcome": "calm",
+  "correction": "none_prespecified",
+  "comparisons": 1,
+  "n_per_condition": 26,
+  "total_trials": 52,
+  "target_effect_d": 0.8,
+  "power_at_target": 0.80,
+  "exclusion_rules": "Pre veya post puanı eksik olan denemeler dışlanır. Süresinin %80'inden önce kesilen oturumlar dışlanır. Aynı gün ikiden fazla deneme yapılmaz.",
+  "conditions": [
+    {"condition_id": "X", "type": "stimulus", "sequence": ["AŞAMA 1 KAZANANI"], "durations_s": [600]},
+    {"condition_id": "D", "type": "silence_control", "sequence": [0], "durations_s": [600]}
+  ],
+  "success_criterion": "p < 0.05 VE |Cohen d| >= 0.5 VE %95 GA sıfırı içermiyor. Bu üçü birden sağlanmadıkça sonuç 'null' veya 'weak_signal' olarak raporlanır.",
+  "notes": [
+    "Aşama 2 başarısız olursa Aşama 1 bulgusu tesadüf kabul edilir ve aday 'rejected' işaretlenir.",
+    "Aşama 2 başarılı olursa aday 'validated' olur; bu yalnızca bu katılımcı ve bu ölçüt için geçerlidir."
+  ]
+}

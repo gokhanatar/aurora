@@ -1,0 +1,23 @@
+name: 🤔 This confused me
+description: A screen, word or button made no sense
+title: "[UX] "
+labels: ["ux", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **This is a real bug report, not a complaint.** "I clicked Add layer and had no idea
+        what happened" was actual feedback that led to the whole Home screen being rewritten.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What confused you?
+      placeholder: "I don't know what 'amplitude' means, and the (?) explanation still didn't help."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?

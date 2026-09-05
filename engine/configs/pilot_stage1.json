@@ -1,0 +1,25 @@
+{
+  "study_id": "AURORA-PILOT-001-S1",
+  "set": "discovery",
+  "stage": 1,
+  "design_rationale": "Güç analizi (aurora power) 4 koşullu tasarımın d=0.8 için koşul başına 35 deneme (23 saat) gerektirdiğini gösterdi. Aşama 1 bu yüzden tarama amaçlıdır: 3 koşul, koşul başına 10 deneme. Bu tasarım YALNIZCA büyük etkileri (MDE ≈ d 1.4) yakalar ve tek başına 'etki yok' sonucunu desteklemez. Aşama 1'de öne çıkan koşul, Aşama 2'de tam güçle sınanır.",
+  "primary_outcome": "calm",
+  "secondary_outcomes": ["energy", "focus"],
+  "correction": "bonferroni",
+  "comparisons": 2,
+  "n_per_condition": 10,
+  "total_trials": 30,
+  "minimum_detectable_effect_d": 1.4,
+  "power_at_target": "d=1.4 → ~0.80 | d=0.8 → ~0.23 (yetersiz, bilinçli kabul edildi)",
+  "exclusion_rules": "Pre veya post puanı eksik olan denemeler dışlanır. Süresinin %80'inden önce kesilen oturumlar dışlanır. Aynı gün ikiden fazla deneme yapılmaz (taşıma etkisi).",
+  "conditions": [
+    {"condition_id": "A", "type": "stimulus", "sequence": [432], "durations_s": [600]},
+    {"condition_id": "B", "type": "stimulus", "sequence": [528], "durations_s": [600]},
+    {"condition_id": "D", "type": "silence_control", "sequence": [0], "durations_s": [600]}
+  ],
+  "notes": [
+    "639 Hz ve sekans protokolleri Aşama 1'e alınmadı: her ek koşul çoklu karşılaştırma cezasını artırır ve gücü düşürür.",
+    "Aşama 1 sonucu 'keşif' bile olsa Aşama 2 doğrulaması olmadan 'validated' sayılmaz.",
+    "Katılımcı koşulu bilmez; etiketler tohumla karıştırılır."
+  ]
+}

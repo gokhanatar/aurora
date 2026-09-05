@@ -1,0 +1,43 @@
+name: 🐛 Bug
+description: Something behaves incorrectly
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where?
+      options:
+        - App — Home / frequencies
+        - App — Analysis
+        - App — Sequence
+        - App — Experiment
+        - App — Journal / export / import
+        - App — Lab / Chladni
+        - Python engine or CLI
+        - Setup / build
+        - Not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: How can we reproduce it?
+      placeholder: |
+        1. Open …
+        2. Type 528 and press …
+        3. …
+
+  - type: input
+    id: env
+    attributes:
+      label: Device / browser / OS
+      placeholder: "iPhone 14, iOS 18, Safari — or macOS 15, Chrome 131"

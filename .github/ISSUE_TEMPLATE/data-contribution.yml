@@ -1,0 +1,64 @@
+name: 📊 Data contribution
+description: Share experiment results or Chladni measurements
+title: "[Data] "
+labels: ["data", "contribution"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Thank you — this is the contribution the project needs most.**
+
+        ⚠️ **Before attaching anything:** open your export file and read it. It is plain JSON
+        exactly so you can. Remove anything you do not want public. Never include names,
+        locations or health details in free-text notes.
+
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What kind of data?
+      options:
+        - Blinded experiment (trials + study)
+        - 30-day journal
+        - Chladni plate photographs
+        - Several of the above
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: method
+    attributes:
+      label: How was it collected?
+      description: Honest answers make the data more useful, not less. Nothing here disqualifies a contribution.
+      options:
+        - label: The preregistration was frozen before I started collecting
+        - label: I did not know which condition I was listening to
+        - label: I included flat/null days, not only interesting ones
+        - label: Conditions were played at the same volume
+        - label: I used headphones
+
+  - type: input
+    id: trials
+    attributes:
+      label: How many trials / days?
+      placeholder: "e.g. 30 trials across 4 conditions, or 21 journal days"
+
+  - type: textarea
+    id: setup
+    attributes:
+      label: Your setup
+      description: Device, headphones, time of day, anything unusual. For Chladni — material, edge length, thickness, boundary condition, excitation point.
+      placeholder: |
+        Experiment: iPhone 14, Sony WH-1000XM4, always 21:00, quiet room
+        Chladni: 20 × 20 cm steel, 1 mm, free edges, driven at centre
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything that went wrong or felt off?
+      description: Interruptions, guesses about which condition was which, days you skipped. This is genuinely useful.
+
+  - type: markdown
+    attributes:
+      value: |
+        **Now attach your file(s)** by dragging them into the box below.
+        App → **Journal → Export → Download everything (.json)**

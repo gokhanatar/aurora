@@ -1,0 +1,18 @@
+{
+  "study_id": "AURORA-PILOT-001",
+  "set": "discovery",
+  "primary_outcome": "calm",
+  "secondary_outcomes": ["energy", "focus"],
+  "correction": "bonferroni",
+  "exclusion_rules": "Trials with missing pre or post ratings are excluded; sessions interrupted before 80% of duration are excluded.",
+  "conditions": [
+    {"condition_id": "A", "label": "A", "type": "stimulus", "sequence": [432], "durations_s": [600]},
+    {"condition_id": "B", "label": "B", "type": "stimulus", "sequence": [528], "durations_s": [600]},
+    {"condition_id": "C", "label": "C", "type": "stimulus", "sequence": [639], "durations_s": [600]},
+    {"condition_id": "D", "label": "D", "type": "silence_control", "sequence": [0], "durations_s": [600]}
+  ],
+  "notes": [
+    "Example only. Primary endpoint and analysis are frozen before unblinding.",
+    "Exploratory score is not therapeutic efficacy."
+  ]
+}

@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 💬 Questions and ideas
+    url: ../../discussions
+    about: Open-ended discussion, research ideas, "has anyone tried…"
+  - name: ⚕️ Medical questions
+    url: ../../blob/main/DISCLAIMER.md
+    about: AURORA is not a medical device and gives no medical advice.
